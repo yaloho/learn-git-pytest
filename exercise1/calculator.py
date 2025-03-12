@@ -1,68 +1,61 @@
-# Exercise 1: Basic Calculator Functions
 from typing import Union
 
-# Defining a Number type for cleaner type hints
+# Définition d'un type pour les nombres (entiers et flottants)
 Number = Union[int, float]
-
 
 def add(a: Number, b: Number) -> Number:
     """
-    Return the sum of a and b.
+    Retourne la somme de a et b.
 
     Args:
-        a: First number
-        b: Second number
+        a: Premier nombre
+        b: Deuxième nombre
 
     Returns:
-        The sum of a and b
+        La somme de a et b
     """
-    # TODO: Implement this function
-    pass
-
+    return a + b
 
 def subtract(a: Number, b: Number) -> Number:
     """
-    Return the result of subtracting b from a.
+    Retourne le résultat de la soustraction de b à a.
 
     Args:
-        a: First number
-        b: Second number
+        a: Premier nombre
+        b: Deuxième nombre
 
     Returns:
-        The result of a - b
+        Le résultat de a - b
     """
-    # TODO: Implement this function
-    pass
-
+    return a - b
 
 def multiply(a: Number, b: Number) -> Number:
     """
-    Return the product of a and b.
+    Retourne le produit de a et b.
 
     Args:
-        a: First number
-        b: Second number
+        a: Premier nombre
+        b: Deuxième nombre
 
     Returns:
-        The product of a and b
+        Le produit de a et b
     """
-    # TODO: Implement this function
-    pass
-
+    return a * b
 
 def divide(a: Number, b: Number) -> Number:
     """
-    Return the result of dividing a by b.
+    Retourne le résultat de la division de a par b.
 
     Args:
-        a: First number (dividend)
-        b: Second number (divisor)
+        a: Premier nombre (dividende)
+        b: Deuxième nombre (diviseur)
 
     Returns:
-        The result of a / b
+        Le résultat de a / b
 
     Raises:
-        ValueError: If b is 0
+        ValueError: Si b est 0
     """
-    # TODO: Implement this function
-    pass
+    if b == 0:
+        raise ValueError("Division par zéro non autorisée")
+    return a / b
