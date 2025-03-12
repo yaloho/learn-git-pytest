@@ -1,5 +1,9 @@
-# Exercise 2: String Utilities
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 12 12:58:07 2025
 
+@author: ahmad
+"""
 
 def reverse_string(s: str) -> str:
     """
@@ -11,8 +15,8 @@ def reverse_string(s: str) -> str:
     Returns:
         The reversed string
     """
-    # TODO: Implement this function
-    pass
+    # Inverse la chaîne de caractères en utilisant le slicing
+    return s[::-1]
 
 
 def count_vowels(s: str) -> int:
@@ -26,8 +30,8 @@ def count_vowels(s: str) -> int:
     Returns:
         The number of vowels in the string
     """
-    # TODO: Implement this function
-    pass
+    vowels = "aeiouAEIOU"  # Liste des voyelles, incluant les majuscules et minuscules
+    return sum(1 for char in s if char in vowels)  # On compte chaque voyelle présente dans la chaîne
 
 
 def is_palindrome(s: str) -> bool:
@@ -42,8 +46,10 @@ def is_palindrome(s: str) -> bool:
     Returns:
         True if the string is a palindrome, False otherwise
     """
-    # TODO: Implement this function
-    pass
+    # On ignore les espaces et on met tout en minuscules pour ignorer la casse
+    s = ''.join(s.split()).lower()
+    # Vérifie si la chaîne est égale à sa version inversée
+    return s == s[::-1]
 
 
 def capitalize_words(s: str) -> str:
@@ -56,5 +62,5 @@ def capitalize_words(s: str) -> str:
     Returns:
         The input string with the first letter of each word capitalized
     """
-    # TODO: Implement this function
-    pass
+    # On découpe la chaîne en mots, on met chaque mot en majuscule et on rejoint les mots avec des espaces
+    return ' '.join(word.capitalize() for word in s.split())
